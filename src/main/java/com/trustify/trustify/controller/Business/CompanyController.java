@@ -22,6 +22,11 @@ public class CompanyController {
 
     private final CompanyService companyService;
 
+    @GetMapping("/test-hosting")
+    public String testHosting() {
+        return "Hosting is working!";
+    }
+
     @PostMapping("/register")
     public ResponseEntity<Map<String, Object>> register(@Valid @RequestBody CompanyDto companyDto) {
         Map<String, Object> response = new HashMap<>();
